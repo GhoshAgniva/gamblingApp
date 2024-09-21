@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Game</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/style.css')}}">
+</head>
+<body>
+    <h1>Welcome to the Casino</h1>
+    <p>Select your level:</p>
+    <form action="/play" method="POST">
+        <label for="level_input">Level:</label>
+        <select name="level_input" id="level_input">
+            <option value="1">Easy (Min deposit: 100)</option>
+            <option value="2">Medium (Min deposit: 500)</option>
+            <option value="3">Hard (Min deposit: 1000)</option>
+        </select>
+        <br><br>
+        <label for="cash_deposite">Enter the amount:</label>
+        <input type="number" name="cash_deposite" id="cash_deposite" min="100" required>
+        <br><br>
+
+        <h3>Enter your choices:</h3>
+        <label for="user_choice_0">Choice 1:</label>
+        <input type="number" name="user_choice_0" id="user_choice_0" required><br><br>
+        <label for="user_choice_1">Choice 2:</label>
+        <input type="number" name="user_choice_1" id="user_choice_1" required><br><br>
+        <label for="user_choice_2">Choice 3:</label>
+        <input type="number" name="user_choice_2" id="user_choice_2" required><br><br>
+
+        <input type="submit" value="Play">
+    </form>
+</body>
+</html>
